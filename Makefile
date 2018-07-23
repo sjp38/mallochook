@@ -5,7 +5,7 @@ program: program.c
 
 
 mallochook.so: mallochook.c
-	gcc -shared -fPIC mallochook.c -o mallochook.so
+	gcc -shared -fPIC mallochook.c -o mallochook.so -ldl
 
 run_unhooked: program
 	./program
