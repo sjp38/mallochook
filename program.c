@@ -7,6 +7,7 @@ int main(void)
 
 	abc = (char *)malloc(8);
 	printf("malloced address: %p\n", abc);
+	free(abc);
 
 	return 0;
 }
