@@ -7,8 +7,8 @@ program: program.c
 mallochook.so: mallochook.c
 	gcc -shared -fPIC mallochook.c -o mallochook.so
 
-run_unhooked:
+run_unhooked: program
 	./program
 
-run_hooked:
+run_hooked: program mallochook.so
 	LD_PRELOAD=$(PWD)/mallochook.so ./program
