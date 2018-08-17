@@ -3,10 +3,10 @@ mallochook
 
 An example for `LD_PRELOAD` based library function hooking.
 
-There is two source code files, `program.c` and `mallochook.c`.
-`program.c` is a source code for a simple program using `malloc()` and
-`free()`.  `mallochook.c` implements the functions that will be called instead
-of `malloc()` and `free()` by the hooking.
+There are two source code files, `program.c` and `mallochook.c` in this
+repository.  `program.c` is source code for a simple program using `malloc()`
+and `free()`, that will be hooked.  `mallochook.c` implements the functions
+that will be called instead of `malloc()` and `free()`.
 
 
 Usage
@@ -15,13 +15,17 @@ Usage
 Below command will build necessary binaries and execute the example program
 with hooking:
 
-`$ make run_hooked`
+```
+$ make run_hooked
+```
 
 
 Below command will build necessary binaries and execute the example program
 without hooking:
 
-`$ make run_unhooked`
+```
+$ make run_unhooked
+```
 
 
 For more detail, `Use the code` ;)
