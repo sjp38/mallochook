@@ -12,3 +12,6 @@ run_unhooked: program
 
 run_hooked: program mallochook.so
 	LD_PRELOAD=$(PWD)/mallochook.so ./program
+
+clean:
+	rm -fr mallochook.so program
